@@ -19,8 +19,19 @@ public class LoginTests extends BaseTest {
         logger.info("Verifying that Product text is displayed");
         Assert.assertTrue(inventoryPage.IsProductsDisplayed(),"Product is not displayed");
 
+    }
+    @Test
+    public void negativeTests(){
+        logger.info("Starting negative login functionality tests");
+        LoginPage loginpage = new LoginPage(driver);
+        loginpage.visit();
+        loginpage.executeLogin("WrongUsername", "Wrongpassword");
+        loginpage.isErrorMessageDisplayed();
+
+        logger.info("Verifying error message is displayed");
+        Assert.assertTrue(loginpage.isErrorMessageDisplayed(), "Error message is not displayed");
+
 
 
     }
-
 }

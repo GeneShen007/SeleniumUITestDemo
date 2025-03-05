@@ -8,6 +8,7 @@ public class LoginPage extends BasePage {
     private By usernameInputLocator = By.id("user-name");
     private By passwordInputLocator = By.id("password");
     private By loginButtonLocator = By.id("login-button");
+    private By errorMessageLocator = By.xpath("//div[contains(@class,'error-message-container')]/h3");
 
 
 
@@ -36,6 +37,10 @@ public class LoginPage extends BasePage {
         enterPassword(password);
         clickLoginButton();
         return new InventoryPage(driver);
+    }
+
+    public boolean isErrorMessageDisplayed (){
+        return isDisplayed(errorMessageLocator);
     }
 
 
