@@ -30,6 +30,10 @@ public class BasePage {
         return driver.findElement(locator).isDisplayed();
     }
 
+    protected String getPageSource(By locator){
+        return driver.findElement(locator).getText();
+    }
+
     public void click(By locator){
         driver.findElement(locator).click();
     }
