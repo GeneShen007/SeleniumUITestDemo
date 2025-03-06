@@ -40,4 +40,14 @@ public class LoginTests extends BaseTest {
         logger.info("Verifying error message is displayed");
         Assert.assertEquals(loginpage.errorMessage(), "Epic sadface: Username is required", "Expected message not displayed");
     }
+    @Test
+    public void negativeTest3(){
+        LoginPage loginpage = new LoginPage(driver);
+        loginpage.visit();
+        loginpage.executeLogin("problem_user", "");
+
+        logger.info("Verifying error message is displayed");
+        Assert.assertEquals(loginpage.errorMessage(), "Epic sadface: Password is required", "Expected message not displayed");
+    }
+
 }
