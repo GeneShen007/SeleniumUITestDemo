@@ -39,8 +39,9 @@ public class LoginPage extends BasePage {
         return new InventoryPage(driver);
     }
 
-    public boolean isErrorMessageDisplayed (){
-        return isDisplayed(errorMessageLocator);
+
+    public String errorMessage (){
+        return getPageSource(errorMessageLocator);
     }
 
 

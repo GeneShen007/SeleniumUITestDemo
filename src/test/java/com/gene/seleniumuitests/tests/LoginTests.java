@@ -18,20 +18,26 @@ public class LoginTests extends BaseTest {
         Assert.assertEquals(inventoryPage.getCurrentUrl(),"https://www.saucedemo.com/inventory.html");
         logger.info("Verifying that Product text is displayed");
         Assert.assertTrue(inventoryPage.IsProductsDisplayed(),"Product is not displayed");
-
     }
+
     @Test
-    public void negativeTests(){
+    public void negativeTest1(){
         logger.info("Starting negative login functionality tests");
         LoginPage loginpage = new LoginPage(driver);
         loginpage.visit();
         loginpage.executeLogin("WrongUsername", "Wrongpassword");
-        loginpage.isErrorMessageDisplayed();
 
         logger.info("Verifying error message is displayed");
-        Assert.assertTrue(loginpage.isErrorMessageDisplayed(), "Error message is not displayed");
+        Assert.assertEquals(loginpage.errorMessage(), "Epic sadface: Username and password do not match any user in this service", "Expected message not displayed");
+    }
 
+    @Test
+    public void negativeTest2(){
+        LoginPage loginpage = new LoginPage(driver);
+        loginpage.visit();
+        loginpage.executeLogin("", "secret_sauce");
 
-
+        logger.info("Verifying error message is displayed");
+        Assert.assertEquals(loginpage.errorMessage(), "Epic sadface: Username is required", "Expected message not displayed");
     }
 }
