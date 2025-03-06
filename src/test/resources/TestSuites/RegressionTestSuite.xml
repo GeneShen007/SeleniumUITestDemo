@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression Test Suite">
+    <test name="Positive Login Test - Chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.gene.seleniumuitests.tests.LoginTests">
+                <methods>
+                    <include name="testLoginFunctionality"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Positive Login Test - Firefox">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="com.gene.seleniumuitests.tests.LoginTests">
+                <methods>
+                    <include name="testLoginFunctionality"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
