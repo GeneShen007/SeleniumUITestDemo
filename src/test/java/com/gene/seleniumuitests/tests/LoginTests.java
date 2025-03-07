@@ -40,4 +40,15 @@ public class LoginTests extends BaseTest {
         logger.info("Verifying error message is displayed");
         Assert.assertEquals(loginpage.errorMessage(), expectedMessage, "Expected message not displayed");
     }
+
+    @Test
+    public void performanceGlitch(){
+        LoginPage loginpage = new LoginPage(driver);
+        loginpage.visit();
+        InventoryPage inventoryPage = loginpage.executeLogin("performance_glitch_user", "secret_sauce");
+
+        logger.info("Verifying successful login to inventory page");
+        Assert.assertTrue(loginpage.urlToBe(),"Page is not loaded");
+
+    }
 }

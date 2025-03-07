@@ -39,9 +39,12 @@ public class LoginPage extends BasePage {
         return new InventoryPage(driver);
     }
 
-
     public String errorMessage (){
         return getPageSource(errorMessageLocator);
+    }
+
+    public Boolean urlToBe (){
+        return waitForUrl("https://www.saucedemo.com/inventory.html");
     }
 
 
