@@ -46,5 +46,27 @@
         </classes>
     </test>
 
+    <test name="Performance Glitch Login Test - Chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.gene.seleniumuitests.tests.LoginTests">
+                <methods>
+                    <include name="performanceGlitch"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Performance Glitch Login Test - Firefox">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="com.gene.seleniumuitests.tests.LoginTests">
+                <methods>
+                    <include name="performanceGlitch"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
 
 </suite>
