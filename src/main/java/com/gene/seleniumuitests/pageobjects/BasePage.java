@@ -37,6 +37,7 @@ public class BasePage {
     public void click(By locator){
         driver.findElement(locator).click();
     }
+
     protected WebElement waitForElement(By locator){
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 
