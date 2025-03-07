@@ -1,6 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="Regression Test Suite">
+
     <test name="Positive Login Test - Chrome">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
@@ -22,5 +23,28 @@
             </class>
         </classes>
     </test>
+
+    <test name="Negative Login Tests - Chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="com.gene.seleniumuitests.tests.LoginTests">
+                <methods>
+                    <include name="negativeTestSet"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Negative Login Tests - Firefox">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="com.gene.seleniumuitests.tests.LoginTests">
+                <methods>
+                    <include name="negativeTestSet"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
 
 </suite>
