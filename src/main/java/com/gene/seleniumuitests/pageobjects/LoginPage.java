@@ -29,7 +29,7 @@ public class LoginPage extends BasePage {
     }
 
     public void clickLoginButton() {
-        driver.findElement(loginButtonLocator).click();
+        click(loginButtonLocator);
     }
 
     public InventoryPage executeLogin(String username, String password){
