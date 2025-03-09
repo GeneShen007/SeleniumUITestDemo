@@ -3,6 +3,8 @@ This is a test automation framework built using **Selenium WebDriver** (UI testi
 
 ## Demo Walkthrough
 
+[Watch the video](https://www.youtube.com/watch?v=TG11TTjdgkU)
+
 ## Technologies Used
 - Java - Core programming language
 - Selenium WebDriver - UI automation
