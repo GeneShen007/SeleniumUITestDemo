@@ -1,4 +1,4 @@
-# SeleniumUITestDemo
+# SeleniumUITestDemo **(UPCOMING: API TEST DEMO)**
 This is a test automation framework built using **Selenium WebDriver** (UI testing) with **TestNG** for test management, and Maven for project/dependencies management. The project automates different login tests for https://www.saucedemo.com/
 
 ## Demo Walkthrough
